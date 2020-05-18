@@ -18,7 +18,7 @@ app.use(morgan('tiny'));
 // CONNECT MONGO
 const MONGO_URI = 'mongodb+srv://shali12359:kjksz263@mernyoutube-zhbdf.mongodb.net/test?retryWrites=true&w=majority';
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/mern_youtube', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mern_youtube', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
