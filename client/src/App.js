@@ -14,7 +14,7 @@ class App extends React.Component {
   };
 
   getBlogPost = () => {
-    Axios.get('http://localhost:5000/api').then((response) => {
+    Axios.get('/api').then((response) => {
         const data = response.data;
         this.setState({ posts: data });
         console.log('Data received');
@@ -47,7 +47,7 @@ class App extends React.Component {
     };
 
     Axios({
-      url: 'http://localhost:5000/api/save',
+      url: '/api/save',
       method: 'POST',
       data: payload
     }).then(() => {
